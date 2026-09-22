@@ -26,7 +26,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency> 
+		<!-- Actuator -->
+		<dependency>
+    		        <groupId>org.springframework.boot</groupId>
+    		        <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 
+		<!-- Prometheus -->
+		<dependency>
+    		        <groupId>io.micrometer</groupId>
+    		     	<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
 
 
 
@@ -79,6 +89,20 @@
     				<groupId>org.sonarsource.scanner.maven</groupId>
     				<artifactId>sonar-maven-plugin</artifactId>
     				<version>3.9.1.2184</version>
+			</plugin>
+			<plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>4.8.6.4</version>
+				<configuration>
+					<plugins>
+						<plugin>
+							<groupId>com.h3xstream.findsecbugs</groupId>
+							<artifactId>findsecbugs-plugin</artifactId>
+							<version>1.13.0</version>
+						</plugin>
+					</plugins>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
